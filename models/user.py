@@ -1,8 +1,9 @@
 import email
-from enum import unique
+# from enum import unique
 from app import db
+from flask_login import UserMixin
 
-class User(db.Model):
+class User(UserMixin,db.Model):
     __tablename__= "users"
     id = db.column(db.Integer,primary_key=True,autoincrement=True)
     first_name = db.column(db.string(),nullable=False)

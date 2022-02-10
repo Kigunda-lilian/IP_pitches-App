@@ -16,12 +16,12 @@ class SignupForm(FlaskForm):
     email= StringField('email',validators=[InputRequired(),Email(message ='invalid email'),Length(min=8 ,max=15)])
     password =PasswordField('password',validators=[InputRequired(),Length(min=4 , max=8)])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired(), EqualTo('password')])
-    remember_me = BooleanField('REmember me')
+    remember_me = BooleanField('Remember me')
     submit = SubmitField('Sign Up')
     
 class PitchesForm(FlaskForm):
     title = StringField('Title', validators=[InputRequired()])
-    category = SelectField('Pitch Category', choices=[('Sales','Sales'),('Interview','Interview'),
+    category = SelectField('Pitch Category', choices=[('',''),('Sales','Sales'),('Interview','Interview'),
     ('Elevator','Elevator'),('Promotion','Promotion'),('Personal','Personal'),
     ('Pickup-lines','Pickup-lines')],validators=[InputRequired()])
     post = TextAreaField('Pitch', validators=[InputRequired()])

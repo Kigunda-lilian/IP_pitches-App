@@ -1,20 +1,28 @@
-{% comment %} {% extends 'base.html' %}
-
-{%block content%}
-<section>
-
-    <h1> This is my homepage<h1>
-
-</section>
-{%endblock%}
- {% endcomment %}
-
-
 {% extends 'base.html' %}
 
-{% block content %}
-    <h1>{% block title %} Index {% endblock %}</h1>
-    <h1>Hello World!</h1>
-    <h2>Welcome to FlaskApp!</h2>
-    <h3>{{ utc_dt }}</h3>
-{% endblock %}
+
+{%block content%}
+<div class="container mt-1">
+  <div class ="row mt-5"
+    
+        <div class ="justify-content-around align-items-center">
+          <div class="col-md-6 lh-lg">
+            <h1 class="text-info">WELCOME TO <em>PITCHES</em>APP</h1>
+            <p class="fw-bolder">If you only had one minute to impress someone, what would you do ?</p>
+            <p>Here at pitchup we got you covered on that!!<br><span>Sign up today to get started</span>
+            </p>
+          
+            
+            <a href="{{url_for('signup')}}" class="btn btn-outline-primary mt-4">Create Account</a>
+          </div>
+          
+          <div class = "col-md-6">
+              <img class="hero-image" src=" /static/images/download.png" alt=""
+          </div>
+          
+       </div>
+    
+  </div>
+</div>
+{%endblock%}
+ 
