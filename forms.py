@@ -11,7 +11,7 @@ class LogInForm(FlaskForm):
     
 class SignupForm(FlaskForm):
     First_name = StringField(' first name',validators=[InputRequired(),Length(min=8 , max=15)])
-    Last_username = StringField('last name',validators=[InputRequired(),Length(min=8 , max=15)])
+    Last_name = StringField('last name',validators=[InputRequired(),Length(min=8 , max=15)])
     username = StringField('username',validators=[InputRequired(),Length(min=8 ,max=15)])
     email= StringField('email',validators=[InputRequired(),Email(message ='invalid email'),Length(min=8 ,max=15)])
     password =PasswordField('password',validators=[InputRequired(),Length(min=4 , max=8)])
