@@ -36,7 +36,7 @@ os.urandom(24)
 
 class Config:
     SECRET_KEY = 'mysecretket'
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:lilian@localhost/apostgre'
+    # SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:lilian@localhost/apostgre'
 
     @staticmethod
     def init_app(app):
@@ -49,8 +49,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    # SQLALCHEMY_DATABASE_URI =os.environ.get('SQLALCHEMY_DATABASE_URI')
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:lilian@localhost/apostgre'
+    SQLALCHEMY_DATABASE_URI =os.environ.get('SQLALCHEMY_DATABASE_URI')
+  
 
 
 class DevConfig(Config):
